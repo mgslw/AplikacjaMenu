@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.magda.aplikacjamenu.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <ImageButton
+            android:id="@+id/kotlet"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="83dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kotlet"
+            android:onClick="onClickKotlet"/>
+
+
+        <TextView
+            android:id="@+id/cenakotlet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/kotlet"
+            android:layout_marginStart="39dp"
+            android:text="15PLN" />
+
+
+        <ImageButton
+            android:id="@+id/kluska"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="83dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/jedzeni"
+            android:onClick="onClickKluska"/>
+
+        <TextView
+            android:id="@+id/cenakluska"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/kluska"
+            android:layout_marginEnd="29dp"
+            android:text="12PLN" />
+
+        <ImageButton
+            android:id="@+id/zupa"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/cenakluska"
+            android:layout_marginTop="58dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/zupa"
+            android:onClick="onClickZupa"/>
+
+        <TextView
+            android:id="@+id/cenazupa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/cenakotlet"
+            android:layout_below="@+id/zupa"
+            android:text="5PLN" />
+
+
+        <ImageButton
+            android:id="@+id/ciach"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/zupa"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ciasto"
+            android:onClick="onClickCiach"/>
+
+        <TextView
+            android:id="@+id/cenaciach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/cenakluska"
+            android:layout_below="@+id/ciach"
+            android:text="4PLN" />
+
+
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="HAPPY HOURS OFF"
+            android:textOn="HAPPY HOURS ON"
+            android:id="@+id/toggleButton"
+            android:layout_centerHorizontal="true"
+            android:onClick="onToggleButtonClicked"
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorAccent"
+        android:id="@+id/suma"
+        android:text="SUMA:"
+        />
+
+</LinearLayout>
